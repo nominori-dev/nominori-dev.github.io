@@ -20,7 +20,7 @@ var config = {
                 "nb_sides": 5
             },
             "image": {
-                "src": "icon2.png",
+                "src": "ICON2.png",
                 "width": 200,
                 "height": 200
             }
