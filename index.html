@@ -17,7 +17,7 @@
         font-weight: 700;
         line-height: 26.4px;
     }
-
+    
     h3 {
         font-family: Consolas, monaco, monospace;
         font-size: 14px;
@@ -26,51 +26,59 @@
         font-weight: 700;
         line-height: 15.4px;
     }
-
+    
     p {
         font-family: Consolas, monaco, monospace;
         font-size: 14px;
+        font-style: normal;
+        font-weight: bold;
         font-style: normal;
         font-variant: normal;
         font-weight: 400;
         line-height: 20px;
     }
-
+    
     blockquote {
         font-family: Consolas, monaco, monospace;
         font-size: 21px;
+        font-style: normal;
+        font-weight: bold;
         font-style: normal;
         font-variant: normal;
         font-weight: 400;
         line-height: 30px;
     }
-
+    
     td {
         font-family: Consolas, monaco, monospace;
         font-size: 13px;
         font-style: normal;
+        font-weight: bold;
         font-variant: normal;
         font-weight: 400;
         line-height: 18.5714px;
         color: green;
     }
-
-    pre{
-        color: green;
+    
+    pre {
+        color: #5EBD3E;
     }
-
+    
     body {
         background-color: black;
+        overflow-y: hidden;
+        /* Hide vertical scrollbar */
+        overflow-x: hidden;
     }
-
+    
     tbody {
         color: green;
     }
-
+    
     a {
         color: green;
     }
-
+    
     .main {
         position: absolute;
         left: 50%;
@@ -78,25 +86,45 @@
         transform: translate(-50%, -50%);
         padding: 10px;
     }
-
-    #app{
+    
+    .subtitle {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         padding: 10px;
+        margin-top: 7%;
+        margin-left: 8%;
+    }
+    
+    #app {
+        position: absolute;
+        left: 50%;
+        top: 57%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
         margin-top: 250px;
         margin-left: 7%;
     }
-
+    
     body,
     html {
         height: 100%
     }
-
-
+    
     div {
         padding: 0;
+    }
+    
+    p {
+        color: white;
+    }
+    
+    footer {
+        clear: both;
+        position: relative;
+        height: 200px;
+        margin-top: -200px;
     }
 </style>
 
@@ -107,15 +135,19 @@
             <tr>
                 <td>
                     <pre>
-                 ________   ________  _____ ______   ___  ________   ________  ________  ___     
-                |\   ___  \|\   __  \|\   _ \  _   \|\  \|\   ___  \|\   __  \|\   __  \|\  \    
-                \ \  \\ \  \ \  \|\  \ \  \\\__\ \  \ \  \ \  \\ \  \ \  \|\  \ \  \|\  \ \  \   
-                 \ \  \\ \  \ \  \\\  \ \  \\|__| \  \ \  \ \  \\ \  \ \  \\\  \ \   _  _\ \  \  
-                  \ \  \\ \  \ \  \\\  \ \  \    \ \  \ \  \ \  \\ \  \ \  \\\  \ \  \\  \\ \  \ 
-                   \ \__\\ \__\ \_______\ \__\    \ \__\ \__\ \__\\ \__\ \_______\ \__\\ _\\ \__\
-                    \|__| \|__|\|_______|\|__|     \|__|\|__|\|__| \|__|\|_______|\|__|\|__|\|__|
+                        <div class="test">
+                            <div class="test_card">
+                  ________   ________  _____ ______   ___  ________   ________  ________  ___     
+                 |\   ___  \|\   __  \|\   _ \  _   \|\  \|\   ___  \|\   __  \|\   __  \|\  \    
+                 \ \  \\ \  \ \  \|\  \ \  \\\__\ \  \ \  \ \  \\ \  \ \  \|\  \ \  \|\  \ \  \   
+                  \ \  \\ \  \ \  \\\  \ \  \\|__| \  \ \  \ \  \\ \  \ \  \\\  \ \   _  _\ \  \  
+                   \ \  \\ \  \ \  \\\  \ \  \    \ \  \ \  \ \  \\ \  \ \  \\\  \ \  \\  \\ \  \ 
+                    \ \__\\ \__\ \_______\ \__\    \ \__\ \__\ \__\\ \__\ \_______\ \__\\ _\\ \__\
+                     \|__| \|__|\|_______|\|__|     \|__|\|__|\|__| \|__|\|_______|\|__|\|__|\|__|
+                            </div>
+                        </div>
                                                                                                     
-                        Junior Java Developer. Visit my page on github -> <a href="https://github.com/nominori-dev">**click here**</a> ʕ•ᴥ•ʔ<br>
+                    <div class="subtitle"></div>
                     </pre>
                     <pre id="app"></pre>
                 </td>
@@ -124,9 +156,11 @@
     </div>
     <script src="particles.js"></script>
     <script src="cfg.js"></script>
+    <script src="jquery.js"></script>
+    <script src="hover3d.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="about_me.js"></script>
-    <script type="text/javascript"
-        src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
+    <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
     <script>
         options = {
             "cursorOuter": "circle-basic",
@@ -137,9 +171,25 @@
             "outerHeight": 30
         };
 
+        var typed = new Typed('.subtitle', {
+            strings: ['Junior Java Developer. Visit my page on github -> <a href="https://github.com/nominori-dev">**click here**</a> ʕ•ᴥ•ʔ<br>'],
+            smartBackspace: true
+        })
+
+        var typed2 = new Typed('#app', {
+            strings: [getText()],
+            smartBackspace: false,
+            typeSpeed: 10,
+            shuffle: true,
+            showCursor: true
+        })
+
+        $(".test").hover3d({
+            selector: ".test_card"
+        });
+
         magicMouse(options);
         particlesJS("particles-js", config);
-        load();
     </script>
 </body>
 
