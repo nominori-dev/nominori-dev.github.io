@@ -20,7 +20,7 @@ var config = {
                 "nb_sides": 5
             },
             "image": {
-                "src": "https://i.ibb.co/QdxNxsj/ICON2.png",
+                "src": "https://github.com/nominori-dev/nominori-dev.github.io/blob/main/ICON2.png",
                 "width": 200,
                 "height": 200
             }
