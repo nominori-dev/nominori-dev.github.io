@@ -1,207 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>nominori-dev</title>
 </head>
-<style>
-    h1 {
-        font-family: Consolas, monaco, monospace;
-        font-size: 24px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 700;
-        line-height: 26.4px;
-    }
-    
-    h3 {
-        font-family: Consolas, monaco, monospace;
-        font-size: 14px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 700;
-        line-height: 15.4px;
-    }
-    
-    p {
-        font-family: Consolas, monaco, monospace;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: bold;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 400;
-        line-height: 20px;
-    }
-    
-    blockquote {
-        font-family: Consolas, monaco, monospace;
-        font-size: 21px;
-        font-style: normal;
-        font-weight: bold;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 400;
-        line-height: 30px;
-    }
-    
-    td {
-        font-family: Consolas, monaco, monospace;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: bold;
-        font-variant: normal;
-        font-weight: 400;
-        line-height: 18.5714px;
-        color: green;
-    }
-    
-    pre {
-        color: #5EBD3E;
-    }
-    
-    body {
-        background-color: black;
-        overflow-y: hidden;
-        /* Hide vertical scrollbar */
-        overflow-x: hidden;
-    }
-    
-    tbody {
-        color: green;
-    }
-    
-    a {
-        color: green;
-    }
-    
-    .main {
-        position: absolute;
-        left: 50%;
-        top: 30%;
-        transform: translate(-50%, -50%);
-        padding: 10px;
-        -webkit-touch-callout: none;
-        /* iOS Safari */
-        -webkit-user-select: none;
-        /* Safari */
-        -khtml-user-select: none;
-        /* Konqueror HTML */
-        -moz-user-select: none;
-        /* Old versions of Firefox */
-        -ms-user-select: none;
-        /* Internet Explorer/Edge */
-        user-select: none;
-    }
-    
-    .subtitle {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        padding: 10px;
-        margin-top: 7%;
-        margin-left: 8%;
-    }
-    
-    #app {
-        position: absolute;
-        left: 50%;
-        top: 57%;
-        transform: translate(-50%, -50%);
-        padding: 10px;
-        margin-top: 250px;
-        margin-left: 7%;
-    }
-    
-    body,
-    html {
-        height: 100%
-    }
-    
-    div {
-        padding: 0;
-    }
-    
-    p {
-        color: white;
-    }
-    
-    footer {
-        clear: both;
-        position: relative;
-        height: 200px;
-        margin-top: -200px;
-    }
-</style>
-
 <body>
-    <div id="particles-js"></div>
-    <div class="main">
-        <tbody>
-            <tr>
-                <td>
-                    <pre>
-                        <div class="test">
-                            <div class="test_card">
-                  ________   ________  _____ ______   ___  ________   ________  ________  ___     
-                 |\   ___  \|\   __  \|\   _ \  _   \|\  \|\   ___  \|\   __  \|\   __  \|\  \    
-                 \ \  \\ \  \ \  \|\  \ \  \\\__\ \  \ \  \ \  \\ \  \ \  \|\  \ \  \|\  \ \  \   
-                  \ \  \\ \  \ \  \\\  \ \  \\|__| \  \ \  \ \  \\ \  \ \  \\\  \ \   _  _\ \  \  
-                   \ \  \\ \  \ \  \\\  \ \  \    \ \  \ \  \ \  \\ \  \ \  \\\  \ \  \\  \\ \  \ 
-                    \ \__\\ \__\ \_______\ \__\    \ \__\ \__\ \__\\ \__\ \_______\ \__\\ _\\ \__\
-                     \|__| \|__|\|_______|\|__|     \|__|\|__|\|__| \|__|\|_______|\|__|\|__|\|__|
-                            </div>
-                        </div>
-                                                                                                    
-                    <div class="subtitle"></div>
-                    </pre>
-                    <pre id="app"></pre>
-                </td>
-            </tr>
-        </tbody>
+    <div id="main">
+        <h1>nominori-dev</h1>
+        <div class="content">
+            <p>You can press <kbd>▲</kbd> <kbd>▼</kbd> on your keyboard or swipe up/down to navigate. Mouse wheel works too.</p>
+            <p><a href="https://codepen.io/theseventh" target="_blank">codepen</a> // <a href="https://twitter.com/the_seventh_kek" target="_blank">twitter</a>
+        </div>
+        <div class="buttons">
+            <button class="next" onclick="go(-1)"></button>
+            <button class="prev" onclick="go(1)"></button>
+        </div>
     </div>
-    <script src="particles.js"></script>
-    <script src="cfg.js"></script>
-    <script src="jquery.js"></script>
-    <script src="hover3d.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="about_me.js"></script>
-    <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
-    <script>
-        options = {
-            "cursorOuter": "circle-basic",
-            "hoverEffect": "circle-move",
-            "hoverItemMove": false,
-            "defaultCursor": false,
-            "outerWidth": 30,
-            "outerHeight": 30
-        };
-
-        var typed = new Typed('.subtitle', {
-            strings: ['Junior Java Developer. Visit my page on github -> <a href="https://github.com/nominori-dev">**click here**</a> ʕ•ᴥ•ʔ<br>'],
-            smartBackspace: true
-        })
-
-        var typed2 = new Typed('#app', {
-            strings: [getText()],
-            smartBackspace: false,
-            typeSpeed: 10,
-            shuffle: true,
-            showCursor: true
-        })
-
-        $(".test").hover3d({
-            selector: ".test_card"
-        });
-
-        magicMouse(options);
-        particlesJS("particles-js", config);
-    </script>
 </body>
 
 </html>
